@@ -1,0 +1,10 @@
+.panel ul li{
+    display: inline-block;
+}
+.panel{
+    background: #fff;
+    border-radius: 5px;
+}
+.img-circle{
+    border-radius: 50%;
+}
