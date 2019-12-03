@@ -1,7 +1,7 @@
 import React from "react";
 import "./ContactItem.css";
 
-const ContactItem = ({avatar, name, description, gender}) => {
+const ContactItem = ({avatar, name, description, gender, facebook, twitter, linkedin, skype, messages}) => {
     let url = `https://randomuser.me/api/portraits/${gender}/${avatar}.jpg`;
     return(
         <div className="row">
@@ -29,19 +29,19 @@ const ContactItem = ({avatar, name, description, gender}) => {
                         <hr />
                         <ul className="social-links list-inline p-b-10">
                             <li className="m-r-10">
-                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Facebook"><i className="fa fa-facebook"></i></a>
+                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips"  href={facebook} target="_blank" data-original-title="Facebook"><i className="fa fa-facebook"></i></a>
                             </li>
                             <li className="m-r-10">
-                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Twitter"><i className="fa fa-twitter"></i></a>
+                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" target="_blank" href= {twitter}data-original-title="Twitter"><i className="fa fa-twitter"></i></a>
                             </li>
                             <li className="m-r-10">
-                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="LinkedIn"><i className="fa fa-linkedin"></i></a>
+                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" target="_blank" href= {linkedin}data-original-title="LinkedIn"><i className="fa fa-linkedin"></i></a>
                             </li>
                             <li className="m-r-10">
-                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Skype"><i className="fa fa-skype"></i></a>
+                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" target="_blank" href={skype}data-original-title="Skype"><i className="fa fa-skype"></i></a>
                             </li>
                             <li className="m-r-10">
-                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" href="#" data-original-title="Message"><i className="fa fa-envelope-o"></i></a>
+                                <a title="" data-placement="top" data-toggle="tooltip" className="tooltips" target="_blank" href= {messages}data-original-title="Message"><i className="fa fa-envelope-o"></i></a>
                             </li>
                         </ul>
                     </div>

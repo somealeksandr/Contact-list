@@ -10,31 +10,56 @@ class App extends React.Component{
             name: "Jack Sparrow",
             description: "Captain",
             avatar: 45,
-            gender: "men"
+            gender: "men",
+            facebook: "https://facebook.com/",
+            twitter: "https://twitter.com/",
+            linkedin: "https://linkedin.com/",
+            skype: "https://skype.com/",
+            messages: "https://messages.google.com/"
         },
         {
-            name: "Cris Nollan",
-            description: "Producer",
+            name: "Chris Nolan",
+            description: "Film director",
             avatar: 20,
-            gender: "men"
+            gender: "men",
+            facebook: "https://facebook.com/",
+            twitter: "https://twitter.com/",
+            linkedin: "https://linkedin.com/",
+            skype: "https://skype.com/",
+            messages: "https://messages.google.com/"
         },
         {
-            name: "Arnold Swarzeneger",
+            name: "Arnold Schwarzenegger",
             description: "Terminator",
             avatar: 36,
-            gender: "men"
+            gender: "men",
+            facebook: "https://facebook.com/",
+            twitter: "https://twitter.com/",
+            linkedin: "https://linkedin.com/",
+            skype: "https://skype.com/",
+            messages: "https://messages.google.com/"
         },
         {
-            name: "Alfred Hitchcok",
+            name: "Alfred Hitchcock",
             description: "Producer",
             avatar: 47,
-            gender: "men"
+            gender: "men",
+            facebook: "https://facebook.com/",
+            twitter: "https://twitter.com/",
+            linkedin: "https://linkedin.com/",
+            skype: "https://skype.com/",
+            messages: "https://messages.google.com/"
         },
         {
-            name: "Silvestr Stalone",
+            name: "Sylvester Stallone",
             description: "Rembo",
             avatar: 20,
-            gender: "women"
+            gender: "men",
+            facebook: "https://facebook.com/",
+            twitter: "https://twitter.com/",
+            linkedin: "https://linkedin.com/",
+            skype: "https://skype.com/",
+            messages: "https://messages.google.com/"
         }
         ];
        
