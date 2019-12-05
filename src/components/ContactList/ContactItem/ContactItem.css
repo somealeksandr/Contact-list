@@ -8,3 +8,32 @@
 .img-circle{
     border-radius: 50%;
 }
+.editButton{
+    margin-right: 200px;
+    height: 40px;
+    width: 100px;
+    border: 2px solid #0b9ac2;
+    border-radius: 5px;
+    background: white;
+    color: #6c757d;
+}
+.borderStyle{
+    border: solid 3px grey;
+    border-radius: 5px;
+}
+.fa-star{
+    font-size: 20px;
+    cursor: pointer;
+    color: #0b9ac2;
+}
+#yellow{
+    color: #fad64e;
+}
+.social_panel{
+    position: relative;
+}
+.star{
+    position: absolute;
+    top: 10px;
+    right: 230px;
+}
