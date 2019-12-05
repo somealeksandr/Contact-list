@@ -21,6 +21,10 @@
     border: solid 3px grey;
     border-radius: 5px;
 }
+#borderStyleDaf{
+    border: solid 3px transparent;
+    border-radius: 5px;
+}
 .fa-star{
     font-size: 20px;
     cursor: pointer;

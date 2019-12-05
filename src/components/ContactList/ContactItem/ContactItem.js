@@ -14,7 +14,7 @@ class ContactItem extends React.Component {
             skype: this.props.skype,
             messages: this.props.messages,
             btnStatus: false,
-            star: false
+            favorite: this.props.favorite
         };
 
         RandomAva = () =>{
@@ -38,7 +38,8 @@ class ContactItem extends React.Component {
 
         SetStarYellow = () => {
             this.setState({
-                star: !this.state.star
+                favorite: !this.state.favorite
+                
             })
         }
 
@@ -58,7 +59,7 @@ class ContactItem extends React.Component {
         }
 
         let star
-        if(this.state.star) {
+        if(this.state.favorite) {
             star = "yellow"
         }
 
@@ -75,7 +76,12 @@ class ContactItem extends React.Component {
                                     <a href="#" className="btn btn-success tooltips mr-2" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
                                         <i className="fa fa-pencil"></i>
                                     </a>
-                                    <a href="#" className="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
+                                    <a href="#" 
+                                    className="btn btn-danger tooltips" 
+                                    data-placement="top" 
+                                    data-toggle="tooltip" 
+                                    data-original-title="Delete"
+                                    onClick={this.props.onDelete}>
                                         <i className="fa fa-close"></i>
                                     </a>
                                 </div>
