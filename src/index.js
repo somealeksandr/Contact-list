@@ -79,7 +79,7 @@ class App extends React.Component {
     onDelete = (id) => {
 
         const index = this.state.List.findIndex(elem => elem.id === id);
-
+        
         let ListNew = [];
         let counter = 0;
         for(let i=0; i<this.state.List.length; i++) {
@@ -95,12 +95,27 @@ class App extends React.Component {
         });
     };
 
+    SetStarYellow = id => {
+
+        this.setState(()=>{
+
+        const index = this.state.List.findIndex(elem => elem.id === id);
+        const newList = this.state.List.slice();
+        newList[index].favorite = !newList[index].favorite;
+
+            return {
+                favorite: !this.newList
+            }
+        })
+    }
+
+
     render() {
 
         return (
             <div className="container bootstrap snippet">
                 <Search></Search>
-                <ContactList ContactList={this.state.List} onDelete={this.onDelete}></ContactList>
+                <ContactList ContactList={this.state.List} onDelete={this.onDelete} SetStarYellow={this.SetStarYellow}></ContactList>
             </div>
         );
     }

@@ -13,8 +13,8 @@ class ContactItem extends React.Component {
             linkedin: this.props.linkedin,
             skype: this.props.skype,
             messages: this.props.messages,
-            btnStatus: false,
-            favorite: this.props.favorite
+            btnStatus: false
+            // favorite: this.props.favorite,
         };
 
         RandomAva = () =>{
@@ -36,12 +36,7 @@ class ContactItem extends React.Component {
             })
         }
 
-        SetStarYellow = () => {
-            this.setState({
-                favorite: !this.state.favorite
-                
-            })
-        }
+        
 
     render() {
         const {name,description,avatar,gender,facebook,twitter,linkedin,skype,messages} = this.state;
@@ -53,13 +48,13 @@ class ContactItem extends React.Component {
             btnStyle = "btn btn-outline-danger true col-2";
         }
 
-        let borderStyle = "panel-body p-t-10"
+        let borderStyle = "panel-body p-t-10 borderS"
         if(this.state.borderStatus) {
             borderStyle = "panel-body p-t-10 borderStyle"
         }
 
         let star
-        if(this.state.favorite) {
+        if(this.props.favorite) {
             star = "yellow"
         }
 
@@ -112,7 +107,7 @@ class ContactItem extends React.Component {
                                     </li>
                                 </ul>
                                 <div className="d-flex star">
-                                    <i className="fa fa-star" id={star} onClick={this.SetStarYellow}></i>
+                                    <i className="fa fa-star" id={star} onClick={this.props.SetStarYellow}></i>
                                 </div>
                                 <button className={btnStyle} onClick={this.RandomAva}>Random</button>
                             </div>
