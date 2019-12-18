@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactItem.css";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 class ContactItem extends React.Component {
 
@@ -14,7 +15,6 @@ class ContactItem extends React.Component {
             skype: this.props.skype,
             messages: this.props.messages,
             btnStatus: false
-            // favorite: this.props.favorite,
         };
 
         RandomAva = () =>{
@@ -53,9 +53,9 @@ class ContactItem extends React.Component {
             borderStyle = "panel-body p-t-10 borderStyle"
         }
 
-        let star
+        let star = "fa fa-star";
         if(this.props.favorite) {
-            star = "yellow"
+            star = "yellow fa fa-star";
         }
 
         return(
@@ -68,9 +68,15 @@ class ContactItem extends React.Component {
                                     <img className="thumb-lg img-circle bx-s" src={url} alt="" />
                                 </a>
                                 <div className="pull-right btn-group-sm">
-                                    <a href="#" className="btn btn-success tooltips mr-2" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                                        <i className="fa fa-pencil"></i>
-                                    </a>
+                                <Link to="/edit" 
+                                className="link btn btn-success tooltips mr-2" 
+                                onClick={this.props.onAddChange}
+                                // onClick={this.props.GetContactID}
+                                data-placement="top" 
+                                data-toggle="tooltip" 
+                                data-original-title="Edit">
+                                    <i className="fa fa-pencil"></i>
+                                </Link>
                                     <a href="#" 
                                     className="btn btn-danger tooltips" 
                                     data-placement="top" 
@@ -107,7 +113,7 @@ class ContactItem extends React.Component {
                                     </li>
                                 </ul>
                                 <div className="d-flex star">
-                                    <i className="fa fa-star" id={star} onClick={this.props.SetStarYellow}></i>
+                                    <i className={star} onClick={this.props.SetStarYellow}></i>
                                 </div>
                                 <button className={btnStyle} onClick={this.RandomAva}>Random</button>
                             </div>

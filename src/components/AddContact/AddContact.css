@@ -1,0 +1,25 @@
+form{
+    margin-left: 100px;
+}
+label{
+    display: block;   
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+input{
+    border-radius: 3px;
+    border: solid 1px grey;
+    padding: 5px;
+    width: 80%;
+}
+.submit{
+    display: block;
+    margin-top: 30px;
+    color: #fff;
+    background: #0b9ac2;
+    border: solid 2px;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+}

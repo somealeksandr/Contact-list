@@ -1,0 +1,11 @@
+ul{
+    list-style-type: none;
+}
+.menu--item{
+    background: #29c2ba;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.link{
+    color: #fff;
+}
